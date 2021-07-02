@@ -1,6 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+
+ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 li {
     display: inline;
 }
+
+li a {
+    text-decoration: none;
+}
+
+nav li {
+    font-size: 0.9rem;
+}
+
 
 .left-align {
     float: left;
@@ -13,7 +34,5 @@ li {
 section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
 }
