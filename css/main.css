@@ -1,6 +1,8 @@
 /* Apply to the whole page */
 :root {
     --primary-color: 0,0,0;
+    --secondary-color: 255,255,255;
+    --tertiary-color: 66,133,244;
 }
 
 body {
@@ -11,47 +13,53 @@ body {
 
 /* For Navigation bar */
 nav {
-    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem 0;
+    justify-content: space-between;
 }
 
-ul {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    font-size: 0.9rem;
-    font-weight: 400;
+nav div a {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 300;
     text-align: center;
-}
-
-nav li a {
+    margin: 0 0.5rem 1rem 0.5rem;
     color: rgba(var(--primary-color),0.85);
     text-decoration: none;
 }
 
-nav li a:hover {
+nav div a:hover {
     color: rgba(var(--primary-color),0.75);
     text-decoration: underline;
     cursor: pointer;
 }
 
-.left-align {
-    float: left;
-}
-
-.right-align {
-    float: right;
-}
-
 #app-grid {
-    color: rgba(var(--primary-color),0.75);
+    color: rgba(var(--primary-color),0.60);
+    vertical-align: middle;
 }
 
 #app-grid:hover {
-    color: rgba(var(--primary-color),0.90);
+    color: rgba(var(--primary-color),0.95);
+    cursor: pointer;
+}
+
+#sign-in {
+    background-color: rgb(var(--tertiary-color));
+    border: none;
+    color: rgb(var(--secondary-color));
+    padding: 7px 13px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 2px;
+    vertical-align: sub;
+}
+
+#sign-in:hover{
+    background-color: rgba(var(--tertiary-color),0.85);
     cursor: pointer;
 }
 
