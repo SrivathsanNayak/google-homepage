@@ -9,6 +9,8 @@ body {
     font-family: Arial, sans-serif;
     height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* For Navigation bar */
@@ -67,7 +69,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10.5rem 0;
+    margin: 8.5rem 0;
+    flex: 1;
 }
 
 section img {
@@ -78,10 +81,11 @@ section img {
 
 form {
     padding-bottom: 2rem;
+    padding-right: 2.5rem; /* had to make this adjustment because of search icon's left 2.5rem */
 }
 
 input {
-    width: 27rem;
+    width: 29rem;
     height: 1.5rem;
     padding: 0.5rem 0.5rem 0.5rem 2.5rem;
     border: 1px solid rgba(var(--primary-color),0.20);
@@ -113,4 +117,48 @@ input:focus {
         width: 20rem;
     }
 }
+
+#search button {
+    background-color: rgba(var(--primary-color),0.05);
+    border: none;
+    border-radius: 6px;
+    padding: 1rem 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgba(var(--primary-color),0.5);
+    margin: 0 0.6rem;
+}
+
+#search button:hover {
+    box-shadow: 0px 0px 2px rgba(var(--primary-color),0.50);
+    color: rgba(var(--primary-color),0.8);
+}
 /* For footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 1rem 0;
+    background-color: rgba(var(--primary-color),0.08);
+    border-top: 1px solid rgba(var(--primary-color),0.07);
+}
+
+footer a {
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: rgba(var(--primary-color),0.50);
+    margin: 0 1rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
